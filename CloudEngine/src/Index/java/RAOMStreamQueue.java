@@ -84,6 +84,10 @@ public class RAOMStreamQueue <T extends Serializable> {
         }
     }
 
+    public synchronized void clear(){
+        reset();
+    }
+
     private void resize(){
         logger.info("the file queue is full and resize it.");
         try {
